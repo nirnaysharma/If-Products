@@ -30,7 +30,8 @@ export default function LandingPage() {
                 console.log("useEffect LandingPage.tsx");
             })
     }, [])
-
+    
+  
     const handleSearchChange = (searchValue: string) => {
         setSearchTerm(searchValue);
         console.log("handleSearchChange");

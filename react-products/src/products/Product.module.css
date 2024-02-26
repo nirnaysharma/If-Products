@@ -1,6 +1,6 @@
 body {
     background-color: #eee;
-  }
+}
 
 .div {
     margin-right: 2%;
@@ -23,6 +23,6 @@ body {
     text-decoration: none;
 }
 
-.image-thumbnail{
+/* .image-thumbnail {
     max-height: 200px !important;
-}
+} */

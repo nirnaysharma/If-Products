@@ -1,5 +1,4 @@
-import { useCallback, useState } from "react";
-import { productDTO } from "../products/products.model";
+import { useState } from "react";
 
 export default function Search({ onSearchChange }: SearchProps) {
 
@@ -14,8 +13,8 @@ export default function Search({ onSearchChange }: SearchProps) {
       }
 
     return (
-        <div style={{display: 'flex', justifyContent: 'flex-end', width: '100%'}}>
-          <input style={{width: '20rem', marginBottom: '2em'}} className="form-control" placeholder="Search" type="text" name="name" onChange={handleChange} />
+        <div className="searchDiv" >
+          <input className="form-control searchTextbox" placeholder="Search" type="text" name="name" onChange={handleChange} />
         </div>
       );
 }
