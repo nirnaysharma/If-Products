@@ -32,10 +32,6 @@ export default function LandingPage() {
             <div className="row">
                 <ProductList products={filteredProducts} />
             </div>
-
-
-
-
         </>
     )
 

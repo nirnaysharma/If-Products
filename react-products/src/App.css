@@ -102,7 +102,7 @@
 }
 
 .searchTextbox {
-    width: 20rem;
+    width: 20rem !important;
     margin-bottom: 2em;
 }
 
