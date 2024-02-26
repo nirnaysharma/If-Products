@@ -1,5 +1,14 @@
-export default function Loading(){
-    return(
-        <img className="loadingGif" alt="Loading" src="https://media4.giphy.com/media/3oEjI6SIIHBdRxXI40/200w.gif?cid=6c09b952pwzu5rvzsdh3opjm0pqd5mnhzdt7r2p3rs0n6i31&ep=v1_gifs_search&rid=200w.gif&ct=g"></img>
+export default function Loading() {
+    return (
+        <div style={{height: '100vh', width: '100vw', justifyContent: 'center', alignItems: 'center', verticalAlign: 'center',
+        display:'flex'}}>
+            <div style={{
+                minWidth: '100px',
+                //width: '33.33%',
+                height: '100px'
+            }}>
+                <span className="loader"></span>
+            </div>
+        </div>
     )
 }

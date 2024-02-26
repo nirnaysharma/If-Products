@@ -14,9 +14,9 @@ export default function Search({ onSearchChange }: SearchProps) {
       }
 
     return (
-        <>
-          <input className="form-control" placeholder="Search" type="text" name="name" onChange={handleChange} />
-        </>
+        <div style={{display: 'flex', justifyContent: 'flex-end', width: '100%'}}>
+          <input style={{width: '20rem', marginBottom: '2em'}} className="form-control" placeholder="Search" type="text" name="name" onChange={handleChange} />
+        </div>
       );
 }
 

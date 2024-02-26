@@ -46,9 +46,9 @@ const mockData = {
       ]
     }
   ],
-  "total": 100,
+  "total": 2,
   "skip": 0,
-  "limit": 30
+  "limit": 10
 }
 // test('renders learn react link', () => {
 //   render(<App />);

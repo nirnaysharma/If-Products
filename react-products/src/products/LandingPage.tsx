@@ -98,12 +98,14 @@ export default function LandingPage() {
                 <ProductList products={productsList?.products} />
             </div> */}
 
+            {/* Pass the callback to the Search component */}
+            <Search onSearchChange={handleSearchChange} />
+
             <div className="row">
                 <ProductList products={filteredProducts} />
             </div>
 
-            {/* Pass the callback to the Search component */}
-            <Search onSearchChange={handleSearchChange} />
+
 
 
         </>

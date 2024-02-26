@@ -8,7 +8,7 @@ import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardImage, MDBIc
 export default function ProductList(props: productListProps) {
 
     return <GenericList list={props.products}>
-        <div className={css.div}>
+        <div className={css.div} style={{alignItems: 'flex-start', rowGap: "5px"}}>
 
             {props.products?.map(product =>
                 <Product {...product} key={product.id} />)}

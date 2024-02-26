@@ -8,70 +8,92 @@ export default function Product(props: productDTO) {
 
     return (
         <>
-            <div className={css.div}>
-                <a href={buildLink()}>
-                    <img alt="Thumbnail" src={props.thumbnail} />
-                </a>
-                <p>
-                    <a href={buildLink()}>{props.title}</a>
-                </p>
-                {/* <p>
-                <a href={buildLink()}>{props.description}</a>
-            </p> */}
-                <p>
-                    <a href={buildLink()}>{props.price}</a>
-                </p>
+            <div className="itemContainer">
+                <div className="itemContainerRoot" >
+                    <div style={{ width: '100%', height: '50%' }}>
+                        {/* <a href={buildLink()}> */}
+                        <img style={{ height: '100px' }} alt="Thumbnail" src={props.thumbnail} />
+                        {/* </a> */}
+                    </div>
+
+                    <div className="itemDetailContainer" style={{ width: '100%', height: '50%' }}>
+                        <div>
+                            <p style={{fontWeight:'bold'}}>
+                                {/* <a href={buildLink()}> */}
+                                {props.title}
+                                {/* </a> */}
+                            </p>
+                        </div>
+
+                        <div>
+                            <p className="itemDescription">
+                                {/* <a href={buildLink()}> */}
+                                {props.description}
+                                {/* </a> */}
+                            </p>
+                        </div>
+
+                        <div style={{display:"flex", flexDirection:"column-reverse",flexGrow: 1}}>
+                            <p style={{color: 'red'}}>
+                                {/* <a href={buildLink()}> */}
+                                {props.price}
+                                {/* </a> */}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </>
 
 
 
-/* <div className="row gx-3 align-items-center mb-3">
-<div className="col-auto">
-    <input type="text" className="form-control" id="title"
-        placeholder="Title of the movie"
-        {...formikProps.getFieldProps("title")}
-    />
-</div>
-<div className="col-auto">
-    <select className="form-select"
-        {...formikProps.getFieldProps("genreId")}
-    >
-        <option value="0">--Choose a genre--</option>
-        {genres.map(genre => <option key={genre.id}
-            value={genre.id}
-        >{genre.name}</option>)}
-    </select>
-</div>
-<div className="col-auto">
-    <div className="form-check">
-        <Field className="form-check-input" id="upcomingReleases"
-            name="upcomingReleases" type="checkbox" />
-        <label className="form-check-label"
-            htmlFor="upcomingReleases">Upcoming Releases</label>
-    </div>
-</div>
-<div className="col-auto">
-    <div className="form-check">
-        <Field className="form-check-input" id="inTheaters"
-            name="inTheaters" type="checkbox" />
-        <label className="form-check-label"
-            htmlFor="inTheaters">In Theaters</label>
-    </div>
-</div>
-<div className="col-auto">
-    <Button className="btn btn-primary"
-        onClick={() => formikProps.submitForm()}
-    >Filter</Button>
-    <Button className="btn btn-danger ms-3"
-        onClick={() => {
-            formikProps.setValues(initialValues);
-            searchMovies(initialValues)
-        }}
-    >Clear</Button>
-</div>
-</div> */
+        /* <div className="row gx-3 align-items-center mb-3">
+        <div className="col-auto">
+            <input type="text" className="form-control" id="title"
+                placeholder="Title of the movie"
+                {...formikProps.getFieldProps("title")}
+            />
+        </div>
+        <div className="col-auto">
+            <select className="form-select"
+                {...formikProps.getFieldProps("genreId")}
+            >
+                <option value="0">--Choose a genre--</option>
+                {genres.map(genre => <option key={genre.id}
+                    value={genre.id}
+                >{genre.name}</option>)}
+            </select>
+        </div>
+        <div className="col-auto">
+            <div className="form-check">
+                <Field className="form-check-input" id="upcomingReleases"
+                    name="upcomingReleases" type="checkbox" />
+                <label className="form-check-label"
+                    htmlFor="upcomingReleases">Upcoming Releases</label>
+            </div>
+        </div>
+        <div className="col-auto">
+            <div className="form-check">
+                <Field className="form-check-input" id="inTheaters"
+                    name="inTheaters" type="checkbox" />
+                <label className="form-check-label"
+                    htmlFor="inTheaters">In Theaters</label>
+            </div>
+        </div>
+        <div className="col-auto">
+            <Button className="btn btn-primary"
+                onClick={() => formikProps.submitForm()}
+            >Filter</Button>
+            <Button className="btn btn-danger ms-3"
+                onClick={() => {
+                    formikProps.setValues(initialValues);
+                    searchMovies(initialValues)
+                }}
+            >Clear</Button>
+        </div>
+        </div> */
 
 
 
