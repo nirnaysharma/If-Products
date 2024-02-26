@@ -7,8 +7,6 @@ export default function Search({ onSearchChange }: SearchProps) {
     function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
         const searchValue = event.target.value;
         setSearchParam(searchValue);
-        console.log(searchValue);
-        console.log("handleChange Search.tsx");
         onSearchChange(searchValue); // Call the callback to update the search term in the parent component
       }
 

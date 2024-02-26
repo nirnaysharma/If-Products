@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import Search from "./search/Search";
 
 export default function Menu(){
     return (

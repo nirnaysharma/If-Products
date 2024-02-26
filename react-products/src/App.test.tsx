@@ -1,11 +1,7 @@
-import React from 'react';
-import { getByText, render, screen, waitFor } from '@testing-library/react';
-import App from './App';
+import { render, screen } from '@testing-library/react';
 import Menu from './Menu';
 import { BrowserRouter } from 'react-router-dom';
 import ProductList from './products/ProductList';
-import axios from 'axios';
-import { log } from 'console';
 
 const mockData = {
   "products": [
@@ -50,17 +46,6 @@ const mockData = {
   "skip": 0,
   "limit": 10
 }
-// test('renders learn react link', () => {
-//   render(<App />);
-//   const linkElement = screen.getByText(/learn react/i);
-//   expect(linkElement).toBeInTheDocument();
-// });
-
-// test('renders menu bar', () => {
-//   render(<Menu />);
-//   const linkElement = screen.getByText(/React Products/i);
-//   expect(linkElement).toBeInTheDocument();
-// });
 
 describe("Menu", () => {
   test("renders menu", () => {
@@ -68,12 +53,6 @@ describe("Menu", () => {
     expect(screen.getByText("React Products")
     ).toBeVisible();
   });
-
-  // test("renders search box", async() => {
-  //   render(await <ProductList {...mockData}></ProductList>);
-  //   expect(screen.getByPlaceholderText("Search")
-  //   ).toBeVisible();
-  // });
 
   test("loads product cards", async () => {
     render(<ProductList {...mockData}></ProductList>);

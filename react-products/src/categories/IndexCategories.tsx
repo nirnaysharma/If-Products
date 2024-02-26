@@ -7,7 +7,6 @@ export default function IndexCategories(){
     useEffect(() => {
         axios.get(urlCategories)
         .then((response: AxiosResponse<string[]>) => {
-            console.log(response.data);
         })
     }, [])
 

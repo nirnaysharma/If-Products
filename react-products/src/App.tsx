@@ -1,12 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { landingPageDTO, productDTO } from './products/products.model';
-import ProductList from './products/ProductList';
 import Menu from './Menu'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import IndexCategories from './categories/IndexCategories';
-import LandingPage from './products/LandingPage';
 import routes from './route-config';
 
 function App() {
