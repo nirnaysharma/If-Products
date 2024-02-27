@@ -14,11 +14,10 @@ namespace ProductsAPI.Tests
         public ProductTests()
         {
             var services = new ServiceCollection();
-            services.AddHttpClient<ProductService>();
-            services.AddTransient<IProductService, ProductService>();
+            services.AddHttpClient<IProductService, ProductService>();
 
             var serviceProvider = services.BuildServiceProvider();
-           _productService = serviceProvider.GetService<IProductService>();
+            _productService = serviceProvider.GetService<IProductService>();
         }
 
         [TestMethod]

@@ -3,7 +3,7 @@ export interface productDTO {
     title: string,
     description: string,
     price: number,
-    //discountPercentage: number,
+    discountPercentage: number,
     thumbnail: string;
 }
 

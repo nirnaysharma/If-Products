@@ -2,13 +2,18 @@ import { productDTO } from "./products.model";
 import './Product.module.css';
 
 export default function Product(props: productDTO) {
-
     return (
         <>
             <div className="itemContainer">
                 <div className="itemContainerRoot" >
                     <div className="imageContainer">
+                    {props.discountPercentage > 0 && (
+                            <div className="discountCircle">
+                                <p className="discountText">{Math.round(props.discountPercentage)}% off</p>
+                            </div>
+                        )}
                         <img className="thumbnailImage" alt="Thumbnail" src={props.thumbnail} />
+                     
                     </div>
 
                     <div className="itemDetailContainer">
@@ -25,16 +30,13 @@ export default function Product(props: productDTO) {
                         </div>
 
                         <div className="itemPrice">
-                            <p className="" >
-                                {props.price}
+                            <p>
+                            €{props.price}
                             </p>
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </>
-
-    )
+    );
 }
