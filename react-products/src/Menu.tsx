@@ -11,7 +11,3 @@ export default function Menu(){
         </nav>
     )
 }
-
-const handleSearchChange = (searchValue: string) => {
-    return '';
-};

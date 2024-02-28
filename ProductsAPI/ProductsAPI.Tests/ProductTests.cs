@@ -17,7 +17,7 @@ namespace ProductsAPI.Tests
             services.AddHttpClient<IProductService, ProductService>();
 
             var serviceProvider = services.BuildServiceProvider();
-            _productService = serviceProvider.GetService<IProductService>();
+            _productService = serviceProvider.GetRequiredService<IProductService>();
         }
 
         [TestMethod]
